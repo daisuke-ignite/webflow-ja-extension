@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Webflow管理画面日本語化",
-  "description": "Webflowの管理画面UIを日本語化する拡張機能。CSV用語集による部分置換翻訳に対応。",
+  "name": "OCディア管理画面 日本語化",
+  "description": "OCディアの管理画面UIを日本語化する拡張機能。CSV用語集による部分置換翻訳・英語フォールバック対応。",
   "version": "1.0.0",
   "icons": {
     "16": "icon16.png",
@@ -11,14 +11,18 @@
   "permissions": [
     "storage"
   ],
-  "host_permissions": [
-    "https://*.webflow.com/*"
-  ],
+  "host_permissions": [],
   "content_scripts": [
     {
-      "matches": ["https://*.webflow.com/*"],
-      "js": ["content.js"],
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["utils.js", "content.js"],
       "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["translation_terms.csv"],
+      "matches": ["<all_urls>"]
     }
   ],
   "options_page": "options.html"

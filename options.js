@@ -1,7 +1,8 @@
 // options.js
-// オプションページのロジック（用語集表示、部分置換プレビューなど）
+// オプションページのロジック（用語集表示、部分置換プレビュー、許可ホスト設定）
 
 let translationDict = {};
+let hostPatterns = [];
 
 // 用語集をテーブル表示
 async function showTranslationTable() {
@@ -44,9 +45,58 @@ function previewPartialReplace() {
   document.getElementById('preview-result').textContent = `翻訳結果: ${result}`;
 }
 
+// --- 許可ホスト/URLパターン設定 ---
+function renderHostPatterns() {
+  const list = document.getElementById('host-pattern-list');
+  list.innerHTML = '';
+  for (const pattern of hostPatterns) {
+    const li = document.createElement('li');
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = '削除';
+    removeBtn.addEventListener('click', async () => {
+      hostPatterns = hostPatterns.filter((p) => p !== pattern);
+      await setAllowedHostPatterns(hostPatterns);
+      renderHostPatterns();
+    });
+    const code = document.createElement('code');
+    code.textContent = pattern;
+    li.appendChild(code);
+    li.appendChild(document.createTextNode(' '));
+    li.appendChild(removeBtn);
+    list.appendChild(li);
+  }
+}
+
+async function initHostPatterns() {
+  hostPatterns = await getAllowedHostPatterns();
+  // 既定値が未設定ならOCディア用を初期投入
+  if (!Array.isArray(hostPatterns) || hostPatterns.length === 0) {
+    hostPatterns = ['*.ocdia.com', 'https://admin.ocdia.com/*'];
+    await setAllowedHostPatterns(hostPatterns);
+  }
+  renderHostPatterns();
+}
+
+function wireHostPatternControls() {
+  document.getElementById('add-host-pattern').addEventListener('click', async () => {
+    const input = document.getElementById('host-pattern-input');
+    const value = (input.value || '').trim();
+    if (!value) return;
+    if (!hostPatterns.includes(value)) {
+      hostPatterns.push(value);
+      await setAllowedHostPatterns(hostPatterns);
+      renderHostPatterns();
+    }
+    input.value = '';
+  });
+}
+
 // ページロード時に表示
 window.addEventListener('DOMContentLoaded', () => {
   showTranslationTable();
   // プレビューボタンにイベント追加
   document.getElementById('preview-btn').addEventListener('click', previewPartialReplace);
+  // 許可ホスト初期化
+  initHostPatterns();
+  wireHostPatternControls();
 }); 

@@ -1,10 +1,13 @@
 // content.js
 // Webflow管理画面のUIテキストを日本語化するコンテンツスクリプト
 
-// utils.jsの関数を利用
-// (manifest.jsonでcontent.js→utils.jsの順で読み込む必要あり)
+// utils.jsの関数を利用（manifest.jsonで utils.js → content.js の順で読み込み）
 
 let translationDict = {};
+let allowedPatterns = [];
+
+// 英語フォールバック要件: 日本語が無いものは英語のまま出す
+// 本スクリプトは部分置換方式のため、用語集に無い語はそのまま（＝英語）を保持するだけで要件を満たす
 
 // 1. CSVファイルの読み込み
 async function loadTranslationDict() {
@@ -15,8 +18,23 @@ async function loadTranslationDict() {
   translationDict = parseTranslationCSV(csvText);
 }
 
+// 許可ホストパターンの読み込み
+async function loadAllowedPatterns() {
+  allowedPatterns = await getAllowedHostPatterns();
+}
+
 // 2. テキストノードの部分置換
 function replaceTextNode(node) {
+  const parentEl = node.parentElement;
+  if (parentEl) {
+    const tag = parentEl.tagName;
+    if (tag === 'SCRIPT' || tag === 'STYLE' || tag === 'NOSCRIPT' || tag === 'TEXTAREA') {
+      return;
+    }
+    if (parentEl.isContentEditable) {
+      return;
+    }
+  }
   let text = node.nodeValue;
   let replaced = false;
   for (const [en, ja] of Object.entries(translationDict)) {
@@ -65,7 +83,11 @@ function observeMutations() {
 
 // 5. 初期化処理
 (async function init() {
-  await loadTranslationDict();
+  await Promise.all([loadTranslationDict(), loadAllowedPatterns()]);
+  // ページが許可対象でなければ無効化
+  if (!isUrlAllowed(window.location, allowedPatterns)) {
+    return;
+  }
   walkAndReplace(document.body);
   observeMutations();
-})(); 
+})();
