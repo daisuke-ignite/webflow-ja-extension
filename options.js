@@ -5,15 +5,28 @@ let translationDict = {};
 
 // 用語集をテーブル表示
 async function showTranslationTable() {
-  // CSVファイルをfetch
-  const res = await fetch(chrome.runtime.getURL('translation_terms.csv'));
-  const csvText = await res.text();
-  // ユーティリティ関数で辞書化
-  translationDict = parseTranslationCSV(csvText);
+  try {
+    // CSVファイルをfetch
+    const res = await fetch(chrome.runtime.getURL('translation_terms.csv'));
+    if (!res.ok) {
+      throw new Error(`CSV読み込み失敗: ${res.status}`);
+    }
+    const csvText = await res.text();
+    // ユーティリティ関数で辞書化
+    translationDict = parseTranslationCSV(csvText);
+  } catch (error) {
+    console.error('翻訳辞書の読み込みに失敗しました:', error);
+    const errorDiv = document.createElement('div');
+    errorDiv.style.color = 'red';
+    errorDiv.textContent = `エラー: 翻訳辞書を読み込めませんでした - ${error.message}`;
+    document.body.appendChild(errorDiv);
+    return;
+  }
 
   // テーブル要素を作成
   const table = document.createElement('table');
-  table.border = 1;
+  table.style.borderCollapse = 'collapse';
+  table.style.border = '1px solid #333';
   // ヘッダー
   const thead = document.createElement('thead');
   thead.innerHTML = '<tr><th>英語 (English)</th><th>日本語 (Japanese)</th></tr>';
@@ -22,7 +35,12 @@ async function showTranslationTable() {
   const tbody = document.createElement('tbody');
   for (const [en, ja] of Object.entries(translationDict)) {
     const tr = document.createElement('tr');
-    tr.innerHTML = `<td>${en}</td><td>${ja}</td>`;
+    const tdEn = document.createElement('td');
+    const tdJa = document.createElement('td');
+    tdEn.textContent = en;
+    tdJa.textContent = ja;
+    tr.appendChild(tdEn);
+    tr.appendChild(tdJa);
     tbody.appendChild(tr);
   }
   table.appendChild(tbody);

@@ -2,17 +2,25 @@
 // Webflow管理画面のUIテキストを日本語化するコンテンツスクリプト
 
 // utils.jsの関数を利用
-// (manifest.jsonでcontent.js→utils.jsの順で読み込む必要あり)
+// (manifest.jsonでutils.js→content.jsの順で読み込む)
 
 let translationDict = {};
 
 // 1. CSVファイルの読み込み
 async function loadTranslationDict() {
-  // 拡張機能パッケージ内のCSVファイルをfetchで取得
-  const res = await fetch(chrome.runtime.getURL('translation_terms.csv'));
-  const csvText = await res.text();
-  // ユーティリティ関数で辞書化
-  translationDict = parseTranslationCSV(csvText);
+  try {
+    // 拡張機能パッケージ内のCSVファイルをfetchで取得
+    const res = await fetch(chrome.runtime.getURL('translation_terms.csv'));
+    if (!res.ok) {
+      throw new Error(`CSV読み込み失敗: ${res.status}`);
+    }
+    const csvText = await res.text();
+    // ユーティリティ関数で辞書化
+    translationDict = parseTranslationCSV(csvText);
+  } catch (error) {
+    console.error('[Webflow日本語化] 翻訳辞書の読み込みに失敗しました:', error);
+    throw error;
+  }
 }
 
 // 2. テキストノードの部分置換
@@ -65,7 +73,12 @@ function observeMutations() {
 
 // 5. 初期化処理
 (async function init() {
-  await loadTranslationDict();
-  walkAndReplace(document.body);
-  observeMutations();
+  try {
+    await loadTranslationDict();
+    walkAndReplace(document.body);
+    observeMutations();
+    console.log('[Webflow日本語化] 翻訳が正常に初期化されました');
+  } catch (error) {
+    console.error('[Webflow日本語化] 初期化に失敗しました:', error);
+  }
 })(); 
