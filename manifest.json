@@ -17,9 +17,15 @@
   "content_scripts": [
     {
       "matches": ["https://*.webflow.com/*"],
-      "js": ["content.js"],
+      "js": ["utils.js", "content.js"],
       "run_at": "document_end"
     }
   ],
-  "options_page": "options.html"
+  "options_page": "options.html",
+  "web_accessible_resources": [
+    {
+      "resources": ["translation_terms.csv"],
+      "matches": ["https://*.webflow.com/*"]
+    }
+  ]
 } 
