@@ -12,13 +12,23 @@
     "storage"
   ],
   "host_permissions": [
+    "https://webflow.com/*",
     "https://*.webflow.com/*"
   ],
   "content_scripts": [
     {
-      "matches": ["https://*.webflow.com/*"],
-      "js": ["content.js"],
+      "matches": [
+        "https://webflow.com/*",
+        "https://*.webflow.com/*"
+      ],
+      "js": ["utils.js", "content.js"],
       "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["translation_terms.csv"],
+      "matches": ["https://webflow.com/*", "https://*.webflow.com/*"]
     }
   ],
   "options_page": "options.html"
