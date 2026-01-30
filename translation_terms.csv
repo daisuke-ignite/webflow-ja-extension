@@ -36,11 +36,9 @@ Updated,更新済み
 Creating,作成中
 Created,作成済み
 Sort,並べ替え
-View,表示
 Hide,非表示
 Show,表示
 Close,閉じる
-Open,開く
 Next,次へ
 Previous,前へ
 Back,戻る
@@ -58,7 +56,6 @@ Float and clear,回り込みとクリア
 Position,配置
 Layout,レイアウト
 Spacing,余白
-Style,スタイル
 Interactions,インタラクション
 on this page,このページ内
 on other pages,他のページ
@@ -94,7 +91,6 @@ Plugin,プラグイン
 Plugins,プラグイン
 Library,ライブラリ
 Libraries,ライブラリ
-Styles,スタイル
 Effects,エフェクト
 Effect,エフェクト
 Fill,塗り
@@ -232,7 +228,7 @@ Width,幅
 Height,高さ
 Size,サイズ
 Radius,半径
-Corner radius,角の半径
+Corner radius,角丸
 Border,ボーダー
 Borders,ボーダー
 Shadow,シャドウ
@@ -288,10 +284,8 @@ Cleared,クリア済み
 Upload,アップロード
 Uploading,アップロード中
 Uploaded,アップロード済み
-Download,ダウンロード
 Downloading,ダウンロード中
 Downloaded,ダウンロード済み
-Link,リンク
 Links,リンク
 Linking,リンク中
 Linked,リンク済み
@@ -309,13 +303,11 @@ Custom,カスタム
 None,なし
 All,すべて
 Current,現在
-New,新規
 Empty,空
 Required,必須
 Optional,任意
 Error,エラー
 Warning,警告
-Success,成功
 Info,情報
 Pending,保留中
 Processing,処理中
@@ -351,7 +343,6 @@ Resources,リソース
 Community,コミュニティ
 Ebooks,電子書籍
 Forum,フォーラム
-Blog,ブログ
 Notifications,通知
 Account settings,アカウント設定
 Workspaces,ワークスペース
@@ -431,7 +422,6 @@ Component Library,コンポーネントライブラリ
 Support,サポート
 Updates,アップデート
 General,一般
-Team,チーム
 Plans,プラン
 Demo,デモ
 Archive,アーカイブ
@@ -440,8 +430,6 @@ Learn,学習
 Home,ホーム
 Agency Workspace,エージェンシーワークスペース
 Switch between grid view and list view,グリッド表示とリスト表示を切り替え
-sites,サイト
-site,サイト
 Legacy Editor,レガシーエディター
 Name,名前
 Folder,フォルダ
@@ -550,7 +538,6 @@ Unpublish site,サイトを非公開
 Variables,変数
 Apps,アプリ
 Mobile,モバイル
-Class,クラス
 Strategy,戦略
 Preferences,環境設定
 Converter,コンバーター
@@ -558,13 +545,11 @@ Icon,アイコン
 and down,以下
 Log in,ログイン
 Usage,使用量
-Code,コード
 roles,ロール
 role,ロール
 users,ユーザー
 admins,管理者
 seats,シート
-content,コンテンツ
 branding,ブランディング
 added,追加された
 people,ユーザー
@@ -602,11 +587,9 @@ px and down,px以下
 Update,更新
 Made,作成
 Site access,サイトアクセス
-code,コード
 Reviewer,レビュアー
 Designer,デザイナー
 guest,ゲスト
-team,チーム
 legacy,レガシー
 Manage,管理する
 edit,編集する
@@ -623,3 +606,1197 @@ example,例
 end,終わり
 their,彼らの
 website,ウェブサイト
+Choose publish destination,公開先を選択
+Advanced options,詳細オプション
+selected domains,選択したドメイン
+Quick find,クイック検索
+Keyboard shortcuts,キーボードショートカット
+CSS preview,CSSプレビュー
+Help & feedback,ヘルプとフィードバック
+all Interactions,すべてのインタラクション
+Only showing interactions created,作成されたインタラクションのみ表示
+elements and build layouts,要素とレイアウトを構築
+Build pages with components,コンポーネントでページを構築
+load interaction,ロードインタラクション
+page load,ページロード
+scroll interaction,スクロールインタラクション
+a day ago,1日前
+Made in Webflow,Webflowで作成
+Made with Webflow,Webflowで作成
+Publish site,サイトを公開
+Publish to selected domains,選択したドメインに公開
+Publish to staging,ステージングに公開
+Publish to production,本番に公開
+All changes published,すべての変更が公開されました
+No unpublished changes,未公開の変更はありません
+View site,サイトを表示
+Open site,サイトを開く
+Open in new tab,新しいタブで開く
+Open Designer,デザイナーを開く
+Open Editor,エディターを開く
+Edit site,サイトを編集
+Edit settings,設定を編集
+Site Settings,サイト設定
+Site settings,サイト設定
+Project Settings,プロジェクト設定
+Project settings,プロジェクト設定
+Workspace Settings,ワークスペース設定
+Workspace settings,ワークスペース設定
+Account Settings,アカウント設定
+Account settings,アカウント設定
+General Settings,一般設定
+General settings,一般設定
+SEO Settings,SEO設定
+SEO settings,SEO設定
+Publishing Settings,公開設定
+Publishing settings,公開設定
+Hosting Settings,ホスティング設定
+Hosting settings,ホスティング設定
+Custom Domains,カスタムドメイン
+Custom domains,カスタムドメイン
+Add domain,ドメインを追加
+Add new domain,新しいドメインを追加
+Remove domain,ドメインを削除
+Verify domain,ドメインを確認
+Domain verified,ドメイン確認済み
+Domain pending,ドメイン保留中
+SSL enabled,SSL有効
+SSL pending,SSL保留中
+Page Settings,ページ設定
+Page settings,ページ設定
+SEO Title,SEOタイトル
+SEO Description,SEO説明文
+Open Graph Title,OGタイトル
+Open Graph Description,OG説明文
+Open Graph Image,OG画像
+Search Engine Indexing,検索エンジンインデックス
+Enable indexing,インデックスを有効化
+Disable indexing,インデックスを無効化
+Sitemap Settings,サイトマップ設定
+Custom Code,カスタムコード
+Head Code,ヘッドコード
+Footer Code,フッターコード
+Before body tag,bodyタグの前
+After body tag,bodyタグの後
+Add custom code,カスタムコードを追加
+Edit custom code,カスタムコードを編集
+Form Settings,フォーム設定
+Form settings,フォーム設定
+Form Name,フォーム名
+Form name,フォーム名
+Form Action,フォームアクション
+Form action,フォームアクション
+Submit Button,送信ボタン
+Submit button,送信ボタン
+Success Message,成功メッセージ
+Success message,成功メッセージ
+Error Message,エラーメッセージ
+Error message,エラーメッセージ
+Redirect URL,リダイレクトURL
+Redirect url,リダイレクトURL
+Form Submissions,フォーム送信
+Form submissions,フォーム送信
+View submissions,送信を表示
+Export submissions,送信をエクスポート
+Delete submissions,送信を削除
+CMS Settings,CMS設定
+CMS settings,CMS設定
+Collection Settings,コレクション設定
+Collection settings,コレクション設定
+Collection List,コレクションリスト
+Collection list,コレクションリスト
+Collection Item,コレクションアイテム
+Collection item,コレクションアイテム
+Add Collection,コレクションを追加
+Add collection,コレクションを追加
+Create Collection,コレクションを作成
+Create collection,コレクションを作成
+Edit Collection,コレクションを編集
+Edit collection,コレクションを編集
+Delete Collection,コレクションを削除
+Delete collection,コレクションを削除
+Collection Fields,コレクションフィールド
+Collection fields,コレクションフィールド
+Add Field,フィールドを追加
+Add field,フィールドを追加
+Edit Field,フィールドを編集
+Edit field,フィールドを編集
+Delete Field,フィールドを削除
+Delete field,フィールドを削除
+Field Name,フィールド名
+Field name,フィールド名
+Field Type,フィールドタイプ
+Field type,フィールドタイプ
+Required Field,必須フィールド
+Required field,必須フィールド
+Help Text,ヘルプテキスト
+Help text,ヘルプテキスト
+Placeholder Text,プレースホルダーテキスト
+Placeholder text,プレースホルダーテキスト
+Default Value,デフォルト値
+Default value,デフォルト値
+Plain Text,プレーンテキスト
+Plain text,プレーンテキスト
+Rich Text,リッチテキスト
+Rich text,リッチテキスト
+Number,数値
+Phone,電話番号
+Email,メール
+Date,日付
+Date & Time,日時
+Date and Time,日時
+Switch,スイッチ
+Color,色
+File,ファイル
+Image,画像
+Video,動画
+Multi-Image,複数画像
+Multi-Reference,複数参照
+Reference,参照
+Option,オプション
+Multi-Select,複数選択
+User,ユーザー
+Users,ユーザー
+Members,メンバー
+Member,メンバー
+Visitor,訪問者
+Visitors,訪問者
+Guest,ゲスト
+Guests,ゲスト
+Admin,管理者
+Admins,管理者
+Editor,エディター
+Editors,エディター
+Collaborator,コラボレーター
+Collaborators,コラボレーター
+Owner,オーナー
+Owners,オーナー
+Invite Member,メンバーを招待
+Invite member,メンバーを招待
+Invite User,ユーザーを招待
+Invite user,ユーザーを招待
+Remove Member,メンバーを削除
+Remove member,メンバーを削除
+Remove User,ユーザーを削除
+Remove user,ユーザーを削除
+Change Role,ロールを変更
+Change role,ロールを変更
+Transfer Ownership,所有権を移行
+Transfer ownership,所有権を移行
+Pending Invite,招待保留中
+Pending invite,招待保留中
+Resend Invite,招待を再送信
+Resend invite,招待を再送信
+Cancel Invite,招待をキャンセル
+Cancel invite,招待をキャンセル
+Ecommerce,Eコマース
+E-commerce,Eコマース
+Products,商品
+Product,商品
+Add Product,商品を追加
+Add product,商品を追加
+Edit Product,商品を編集
+Edit product,商品を編集
+Delete Product,商品を削除
+Delete product,商品を削除
+Product Settings,商品設定
+Product settings,商品設定
+Price,価格
+Compare Price,比較価格
+Compare price,比較価格
+SKU,SKU
+Inventory,在庫
+Stock,在庫
+In Stock,在庫あり
+Out of Stock,在庫切れ
+Low Stock,在庫少
+Shipping,配送
+Tax,税金
+Discount,割引
+Discounts,割引
+Coupon,クーポン
+Coupons,クーポン
+Order,注文
+Orders,注文
+Customer,顧客
+Customers,顧客
+Checkout,チェックアウト
+Cart,カート
+Add to Cart,カートに追加
+Add to cart,カートに追加
+Remove from Cart,カートから削除
+Remove from cart,カートから削除
+View Cart,カートを表示
+View cart,カートを表示
+Payment,支払い
+Payments,支払い
+Billing,請求
+Invoices,請求書
+Invoice,請求書
+Subscription,サブスクリプション
+Subscriptions,サブスクリプション
+Plan,プラン
+Plans,プラン
+Upgrade,アップグレード
+Downgrade,ダウングレード
+Cancel Subscription,サブスクリプションをキャンセル
+Cancel subscription,サブスクリプションをキャンセル
+Backup,バックアップ
+Backups,バックアップ
+Create Backup,バックアップを作成
+Create backup,バックアップを作成
+Restore Backup,バックアップを復元
+Restore backup,バックアップを復元
+Delete Backup,バックアップを削除
+Delete backup,バックアップを削除
+Automatic Backups,自動バックアップ
+Automatic backups,自動バックアップ
+Manual Backup,手動バックアップ
+Manual backup,手動バックアップ
+Version,バージョン
+Versions,バージョン
+Version History,バージョン履歴
+Version history,バージョン履歴
+Restore Version,バージョンを復元
+Restore version,バージョンを復元
+Compare Versions,バージョンを比較
+Compare versions,バージョンを比較
+Assets,アセット
+Asset,アセット
+Upload Asset,アセットをアップロード
+Upload asset,アセットをアップロード
+Delete Asset,アセットを削除
+Delete asset,アセットを削除
+Replace Asset,アセットを置換
+Replace asset,アセットを置換
+Asset Library,アセットライブラリ
+Asset library,アセットライブラリ
+File Size,ファイルサイズ
+File size,ファイルサイズ
+File Type,ファイルタイプ
+File type,ファイルタイプ
+Dimensions,サイズ
+Alt Text,代替テキスト
+Alt text,代替テキスト
+Interactions,インタラクション
+Interaction,インタラクション
+Add Interaction,インタラクションを追加
+Add interaction,インタラクションを追加
+Edit Interaction,インタラクションを編集
+Edit interaction,インタラクションを編集
+Delete Interaction,インタラクションを削除
+Delete interaction,インタラクションを削除
+Trigger,トリガー
+Triggers,トリガー
+Animation,アニメーション
+Animations,アニメーション
+Mouse Click,マウスクリック
+Mouse click,マウスクリック
+Mouse Hover,マウスホバー
+Mouse hover,マウスホバー
+Mouse Over,マウスオーバー
+Mouse over,マウスオーバー
+Mouse Out,マウスアウト
+Mouse out,マウスアウト
+Scroll Into View,スクロールで表示
+Scroll into view,スクロールで表示
+While Scrolling,スクロール中
+While scrolling,スクロール中
+Page Load,ページロード
+Page Scroll,ページスクロール
+Page scroll,ページスクロール
+Element Trigger,要素トリガー
+Element trigger,要素トリガー
+Class Trigger,クラストリガー
+Class trigger,クラストリガー
+Initial State,初期状態
+Initial state,初期状態
+Timed Actions,タイミングアクション
+Timed actions,タイミングアクション
+Loop,ループ
+Infinite Loop,無限ループ
+Infinite loop,無限ループ
+Ease In,イーズイン
+Ease Out,イーズアウト
+Ease In Out,イーズインアウト
+Ease in out,イーズインアウト
+Linear,リニア
+Custom Easing,カスタムイージング
+Custom easing,カスタムイージング
+Bezier Curve,ベジェカーブ
+Bezier curve,ベジェカーブ
+Breakpoint,ブレークポイント
+Breakpoints,ブレークポイント
+Desktop,デスクトップ
+Tablet,タブレット
+Mobile Landscape,モバイル横向き
+Mobile landscape,モバイル横向き
+Mobile Portrait,モバイル縦向き
+Mobile portrait,モバイル縦向き
+Landscape,横向き
+Portrait,縦向き
+Small,小
+Medium,中
+Large,大
+Extra Large,特大
+Extra large,特大
+Show on,表示
+Hide on,非表示
+Visible on,表示
+Hidden on,非表示
+Responsive,レスポンシブ
+Responsive Settings,レスポンシブ設定
+Responsive settings,レスポンシブ設定
+Navbar,ナビバー
+Navigation,ナビゲーション
+Nav Menu,ナビメニュー
+Nav Link,ナビリンク
+Dropdown,ドロップダウン
+Dropdown Menu,ドロップダウンメニュー
+Dropdown menu,ドロップダウンメニュー
+Menu Button,メニューボタン
+Menu button,メニューボタン
+Hamburger Menu,ハンバーガーメニュー
+Hamburger menu,ハンバーガーメニュー
+Tab,タブ
+Tabs,タブ
+Tab Menu,タブメニュー
+Tab Content,タブコンテンツ
+Tab content,タブコンテンツ
+Accordion,アコーディオン
+Slider,スライダー
+Slide,スライド
+Slides,スライド
+Lightbox,ライトボックス
+Modal,モーダル
+Popup,ポップアップ
+Popups,ポップアップ
+Banner,バナー
+Hero,ヒーロー
+Header,ヘッダー
+Footer,フッター
+Sidebar,サイドバー
+Section,セクション
+Container,コンテナ
+Wrapper,ラッパー
+Div Block,Divブロック
+Div block,Divブロック
+Link Block,リンクブロック
+Link block,リンクブロック
+V Flex,縦フレックス
+H Flex,横フレックス
+Quick Stack,クイックスタック
+Columns,カラム
+Column,カラム
+Grid,グリッド
+Row,行
+Cell,セル
+Button,ボタン
+Buttons,ボタン
+Input,入力
+Input Field,入力フィールド
+Input field,入力フィールド
+Text Field,テキストフィールド
+Text field,テキストフィールド
+Text Area,テキストエリア
+Text area,テキストエリア
+Textarea,テキストエリア
+Select,選択
+Select Field,選択フィールド
+Select field,選択フィールド
+Checkbox,チェックボックス
+Radio Button,ラジオボタン
+Radio button,ラジオボタン
+Form,フォーム
+Form Block,フォームブロック
+Form block,フォームブロック
+Label,ラベル
+Labels,ラベル
+Error State,エラー状態
+Error state,エラー状態
+Success State,成功状態
+Success state,成功状態
+Heading,見出し
+Headings,見出し
+Paragraph,段落
+Block Quote,引用
+Block quote,引用
+Blockquote,引用
+List,リスト
+Ordered List,番号付きリスト
+Ordered list,番号付きリスト
+Unordered List,番号なしリスト
+Unordered list,番号なしリスト
+List Item,リストアイテム
+List item,リストアイテム
+Embed,埋め込み
+Code Embed,コード埋め込み
+Code embed,コード埋め込み
+HTML Embed,HTML埋め込み
+HTML embed,HTML埋め込み
+Custom Embed,カスタム埋め込み
+Custom embed,カスタム埋め込み
+Map,地図
+Google Map,Googleマップ
+Google map,Googleマップ
+YouTube,YouTube
+Vimeo,Vimeo
+Video,動画
+Background Video,背景動画
+Background video,背景動画
+Lottie,Lottie
+Lottie Animation,Lottieアニメーション
+Lottie animation,Lottieアニメーション
+Spline,Spline
+Symbol,シンボル
+Symbols,シンボル
+Create Symbol,シンボルを作成
+Create symbol,シンボルを作成
+Unlink Symbol,シンボルのリンクを解除
+Unlink symbol,シンボルのリンクを解除
+Edit Symbol,シンボルを編集
+Edit symbol,シンボルを編集
+Component,コンポーネント
+Components,コンポーネント
+Create Component,コンポーネントを作成
+Create component,コンポーネントを作成
+Edit Component,コンポーネントを編集
+Edit component,コンポーネントを編集
+Unlink Component,コンポーネントのリンクを解除
+Unlink component,コンポーネントのリンクを解除
+Component Properties,コンポーネントプロパティ
+Component properties,コンポーネントプロパティ
+Property,プロパティ
+Properties,プロパティ
+Slot,スロット
+Slots,スロット
+Instance,インスタンス
+Instances,インスタンス
+Override,オーバーライド
+Overrides,オーバーライド
+Reset Override,オーバーライドをリセット
+Reset override,オーバーライドをリセット
+Reset All Overrides,すべてのオーバーライドをリセット
+Reset all overrides,すべてのオーバーライドをリセット
+Classes,クラス
+Add Class,クラスを追加
+Add class,クラスを追加
+Remove Class,クラスを削除
+Remove class,クラスを削除
+Rename Class,クラス名を変更
+Rename class,クラス名を変更
+Combo Class,コンボクラス
+Combo class,コンボクラス
+Base Class,ベースクラス
+Base class,ベースクラス
+State,状態
+States,状態
+Normal State,通常状態
+Normal state,通常状態
+Hover State,ホバー状態
+Hover state,ホバー状態
+Pressed State,押下状態
+Pressed state,押下状態
+Focused State,フォーカス状態
+Focused state,フォーカス状態
+Current State,現在の状態
+Current state,現在の状態
+Visited State,訪問済み状態
+Visited state,訪問済み状態
+Placeholder State,プレースホルダー状態
+Placeholder state,プレースホルダー状態
+Empty State,空状態
+Empty state,空状態
+Error State,エラー状態
+Error state,エラー状態
+Tag,タグ
+Tags,タグ
+HTML Tag,HTMLタグ
+HTML tag,HTMLタグ
+ID,ID
+Element ID,要素ID
+Element id,要素ID
+Custom Attributes,カスタム属性
+Custom attributes,カスタム属性
+Add Attribute,属性を追加
+Add attribute,属性を追加
+Style Panel,スタイルパネル
+Style panel,スタイルパネル
+Settings Panel,設定パネル
+Settings panel,設定パネル
+Navigator Panel,ナビゲーターパネル
+Navigator panel,ナビゲーターパネル
+Add Panel,追加パネル
+Add panel,追加パネル
+Layers Panel,レイヤーパネル
+Layers panel,レイヤーパネル
+Assets Panel,アセットパネル
+Assets panel,アセットパネル
+Pages Panel,ページパネル
+Pages panel,ページパネル
+Components Panel,コンポーネントパネル
+Components panel,コンポーネントパネル
+Symbols Panel,シンボルパネル
+Symbols panel,シンボルパネル
+Typography,タイポグラフィ
+Font Family,フォントファミリー
+Font family,フォントファミリー
+Font Size,フォントサイズ
+Font size,フォントサイズ
+Font Weight,フォントウェイト
+Font weight,フォントウェイト
+Font Style,フォントスタイル
+Font style,フォントスタイル
+Line Height,行の高さ
+Line height,行の高さ
+Letter Spacing,文字間隔
+Letter spacing,文字間隔
+Text Align,テキスト揃え
+Text align,テキスト揃え
+Text Decoration,テキスト装飾
+Text decoration,テキスト装飾
+Text Transform,テキスト変形
+Text transform,テキスト変形
+Text Color,テキスト色
+Text color,テキスト色
+Uppercase,大文字
+Lowercase,小文字
+Capitalize,先頭大文字
+None,なし
+Underline,下線
+Strikethrough,取り消し線
+Overline,上線
+Normal,通常
+Italic,斜体
+Bold,太字
+Regular,レギュラー
+Thin,シン
+Light,ライト
+Extra Light,エクストラライト
+Extra light,エクストラライト
+Semi Bold,セミボールド
+Semi bold,セミボールド
+Extra Bold,エクストラボールド
+Extra bold,エクストラボールド
+Black,ブラック
+Background,背景
+Background Color,背景色
+Background color,背景色
+Background Image,背景画像
+Background image,背景画像
+Background Position,背景位置
+Background position,背景位置
+Background Size,背景サイズ
+Background size,背景サイズ
+Cover,カバー
+Contain,コンテイン
+Auto,自動
+Repeat,繰り返し
+No Repeat,繰り返しなし
+No repeat,繰り返しなし
+Repeat X,横に繰り返し
+Repeat Y,縦に繰り返し
+Background Attachment,背景固定
+Background attachment,背景固定
+Scroll,スクロール
+Fixed,固定
+Border,ボーダー
+Border Color,ボーダー色
+Border color,ボーダー色
+Border Width,ボーダー幅
+Border width,ボーダー幅
+Border Style,ボーダースタイル
+Border style,ボーダースタイル
+Border Radius,ボーダー半径
+Border radius,ボーダー半径
+Solid,実線
+Dashed,破線
+Dotted,点線
+Double,二重線
+None,なし
+Shadow,シャドウ
+Box Shadow,ボックスシャドウ
+Box shadow,ボックスシャドウ
+Text Shadow,テキストシャドウ
+Text shadow,テキストシャドウ
+Add Shadow,シャドウを追加
+Add shadow,シャドウを追加
+Inset,内側
+Blur,ぼかし
+Spread,広がり
+X Offset,X オフセット
+Y Offset,Y オフセット
+Opacity,不透明度
+Filter,フィルター
+Filters,フィルター
+Blur Filter,ぼかしフィルター
+Saturation,彩度
+Brightness,明るさ
+Contrast,コントラスト
+Grayscale,グレースケール
+Sepia,セピア
+Hue Rotate,色相回転
+Hue rotate,色相回転
+Invert,反転
+Backdrop Filter,背景フィルター
+Backdrop filter,背景フィルター
+Transform,変形
+Transforms,変形
+Move,移動
+Scale,拡大縮小
+Rotate,回転
+Skew,傾斜
+Origin,原点
+Transform Origin,変形原点
+Transform origin,変形原点
+Perspective,パース
+Preserve 3D,3D保持
+Preserve 3d,3D保持
+Transition,トランジション
+Transitions,トランジション
+Add Transition,トランジションを追加
+Add transition,トランジションを追加
+Transition Property,トランジションプロパティ
+Transition property,トランジションプロパティ
+Transition Duration,トランジション時間
+Transition duration,トランジション時間
+Transition Timing,トランジションタイミング
+Transition timing,トランジションタイミング
+Transition Delay,トランジション遅延
+Transition delay,トランジション遅延
+All Properties,すべてのプロパティ
+All properties,すべてのプロパティ
+Cursor,カーソル
+Pointer,ポインター
+Default,デフォルト
+Not Allowed,許可されていない
+Not allowed,許可されていない
+Grab,つかむ
+Grabbing,つかみ中
+Display,ディスプレイ
+Block,ブロック
+Inline,インライン
+Inline Block,インラインブロック
+Inline block,インラインブロック
+Flex,フレックス
+Grid,グリッド
+None,なし
+Flexbox,フレックスボックス
+Flex Direction,フレックス方向
+Flex direction,フレックス方向
+Row,行
+Row Reverse,行逆順
+Row reverse,行逆順
+Column,列
+Column Reverse,列逆順
+Column reverse,列逆順
+Justify Content,コンテンツの配置
+Justify content,コンテンツの配置
+Align Items,アイテムの配置
+Align items,アイテムの配置
+Align Content,コンテンツの揃え
+Align content,コンテンツの揃え
+Flex Start,開始位置
+Flex start,開始位置
+Flex End,終了位置
+Flex end,終了位置
+Center,中央
+Space Between,均等配置
+Space between,均等配置
+Space Around,両端余白
+Space around,両端余白
+Space Evenly,均等余白
+Space evenly,均等余白
+Stretch,伸縮
+Baseline,ベースライン
+Flex Wrap,折り返し
+Flex wrap,折り返し
+Nowrap,折り返さない
+Wrap,折り返す
+Wrap Reverse,逆折り返し
+Wrap reverse,逆折り返し
+Flex Grow,拡張
+Flex grow,拡張
+Flex Shrink,縮小
+Flex shrink,縮小
+Flex Basis,基準サイズ
+Flex basis,基準サイズ
+Order,順序
+Align Self,自身の配置
+Align self,自身の配置
+Gap,間隔
+Row Gap,行間隔
+Row gap,行間隔
+Column Gap,列間隔
+Column gap,列間隔
+CSS Grid,CSSグリッド
+CSS grid,CSSグリッド
+Grid Template,グリッドテンプレート
+Grid template,グリッドテンプレート
+Grid Columns,グリッド列
+Grid columns,グリッド列
+Grid Rows,グリッド行
+Grid rows,グリッド行
+Grid Auto,グリッド自動
+Grid auto,グリッド自動
+Grid Area,グリッドエリア
+Grid area,グリッドエリア
+fr,fr
+Auto Fill,自動埋め
+Auto fill,自動埋め
+Auto Fit,自動フィット
+Auto fit,自動フィット
+Min Content,最小コンテンツ
+Min content,最小コンテンツ
+Max Content,最大コンテンツ
+Max content,最大コンテンツ
+Position,配置
+Static,静的
+Relative,相対
+Absolute,絶対
+Fixed,固定
+Sticky,スティッキー
+Top,上
+Bottom,下
+Left,左
+Right,右
+Z-Index,Z インデックス
+Z-index,Zインデックス
+Overflow,オーバーフロー
+Visible,表示
+Hidden,非表示
+Scroll,スクロール
+Auto,自動
+Overflow X,横オーバーフロー
+Overflow Y,縦オーバーフロー
+Clip,クリップ
+Width,幅
+Height,高さ
+Min Width,最小幅
+Min width,最小幅
+Max Width,最大幅
+Max width,最大幅
+Min Height,最小高さ
+Min height,最小高さ
+Max Height,最大高さ
+Max height,最大高さ
+px,px
+%,％
+em,em
+rem,rem
+vw,vw
+vh,vh
+ch,ch
+Auto,自動
+Fit Content,コンテンツに合わせる
+Fit content,コンテンツに合わせる
+Aspect Ratio,アスペクト比
+Aspect ratio,アスペクト比
+Object Fit,オブジェクトフィット
+Object fit,オブジェクトフィット
+Object Position,オブジェクト位置
+Object position,オブジェクト位置
+Margin,マージン
+Padding,パディング
+All Sides,すべての辺
+All sides,すべての辺
+Individual Sides,個別の辺
+Individual sides,個別の辺
+Margin Top,上マージン
+Margin Bottom,下マージン
+Margin Left,左マージン
+Margin Right,右マージン
+Padding Top,上パディング
+Padding Bottom,下パディング
+Padding Left,左パディング
+Padding Right,右パディング
+Page,ページ
+Pages,ページ
+Add Page,ページを追加
+Add page,ページを追加
+Create Page,ページを作成
+Create page,ページを作成
+Delete Page,ページを削除
+Delete page,ページを削除
+Duplicate Page,ページを複製
+Duplicate page,ページを複製
+Rename Page,ページ名を変更
+Rename page,ページ名を変更
+Home Page,ホームページ
+Home page,ホームページ
+404 Page,404ページ
+Error Page,エラーページ
+Error page,エラーページ
+Utility Pages,ユーティリティページ
+Utility pages,ユーティリティページ
+Static Pages,静的ページ
+Static pages,静的ページ
+CMS Pages,CMSページ
+CMS pages,CMSページ
+Template Page,テンプレートページ
+Template page,テンプレートページ
+Folder,フォルダ
+Folders,フォルダ
+Add Folder,フォルダを追加
+Add folder,フォルダを追加
+Create Folder,フォルダを作成
+Create folder,フォルダを作成
+Delete Folder,フォルダを削除
+Delete folder,フォルダを削除
+Rename Folder,フォルダ名を変更
+Rename folder,フォルダ名を変更
+URL Slug,URLスラッグ
+URL slug,URLスラッグ
+URL Path,URLパス
+URL path,URLパス
+Protected Page,保護されたページ
+Protected page,保護されたページ
+Password Protected,パスワード保護
+Password protected,パスワード保護
+Members Only,メンバー限定
+Members only,メンバー限定
+Publish All,すべて公開
+Publish all,すべて公開
+Unpublish All,すべて非公開
+Unpublish all,すべて非公開
+Staged Changes,ステージング済みの変更
+Staged changes,ステージング済みの変更
+Publish Staged Changes,ステージング済みの変更を公開
+Publish staged changes,ステージング済みの変更を公開
+Publish changes,変更を公開
+Quick Find,クイック検索
+Search,検索
+Search Pages,ページを検索
+Search pages,ページを検索
+Search Elements,要素を検索
+Search elements,要素を検索
+Search Classes,クラスを検索
+Search classes,クラスを検索
+Search Assets,アセットを検索
+Search assets,アセットを検索
+Search Symbols,シンボルを検索
+Search symbols,シンボルを検索
+Search Components,コンポーネントを検索
+Search components,コンポーネントを検索
+Find and Replace,検索と置換
+Find and replace,検索と置換
+Recent,最近
+Recent Pages,最近のページ
+Recent pages,最近のページ
+Favorites,お気に入り
+Starred,スター付き
+Pinned,固定
+Archive,アーカイブ
+Archived,アーカイブ済み
+Trash,ゴミ箱
+Deleted,削除済み
+Restore,復元
+Delete Permanently,完全に削除
+Delete permanently,完全に削除
+Empty Trash,ゴミ箱を空にする
+Empty trash,ゴミ箱を空にする
+Preview,プレビュー
+Preview Mode,プレビューモード
+Preview mode,プレビューモード
+Desktop Preview,デスクトッププレビュー
+Desktop preview,デスクトッププレビュー
+Tablet Preview,タブレットプレビュー
+Tablet preview,タブレットプレビュー
+Mobile Preview,モバイルプレビュー
+Mobile preview,モバイルプレビュー
+Responsive Preview,レスポンシブプレビュー
+Responsive preview,レスポンシブプレビュー
+Share Preview,プレビューを共有
+Share preview,プレビューを共有
+Preview Link,プレビューリンク
+Preview link,プレビューリンク
+Copy Preview Link,プレビューリンクをコピー
+Copy preview link,プレビューリンクをコピー
+Keyboard Shortcuts,キーボードショートカット
+Help,ヘルプ
+Help Center,ヘルプセンター
+Help center,ヘルプセンター
+Documentation,ドキュメント
+Tutorials,チュートリアル
+Video Tutorials,動画チュートリアル
+Community,コミュニティ
+Forum,フォーラム
+Support,サポート
+Contact Support,サポートに連絡
+Contact support,サポートに連絡
+Report Bug,バグを報告
+Report bug,バグを報告
+Feature Request,機能リクエスト
+Feature request,機能リクエスト
+Feedback,フィードバック
+Send Feedback,フィードバックを送信
+Send feedback,フィードバックを送信
+What's New,新機能
+Whats New,新機能
+Release Notes,リリースノート
+Release notes,リリースノート
+Changelog,変更履歴
+Updates,アップデート
+Notifications,通知
+Notification,通知
+Mark as Read,既読にする
+Mark as read,既読にする
+Mark All as Read,すべて既読にする
+Mark all as read,すべて既読にする
+Clear All,すべてクリア
+Clear all,すべてクリア
+Account,アカウント
+My Account,マイアカウント
+My account,マイアカウント
+Profile,プロフィール
+My Profile,マイプロフィール
+My profile,マイプロフィール
+Edit Profile,プロフィールを編集
+Edit profile,プロフィールを編集
+Profile Picture,プロフィール画像
+Profile picture,プロフィール画像
+Avatar,アバター
+Username,ユーザー名
+Display Name,表示名
+Display name,表示名
+Full Name,フルネーム
+Full name,フルネーム
+First Name,名
+First name,名
+Last Name,姓
+Last name,姓
+Email Address,メールアドレス
+Email address,メールアドレス
+Change Email,メールアドレスを変更
+Change email,メールアドレスを変更
+Password,パスワード
+Change Password,パスワードを変更
+Change password,パスワードを変更
+Current Password,現在のパスワード
+Current password,現在のパスワード
+New Password,新しいパスワード
+New password,新しいパスワード
+Confirm Password,パスワードを確認
+Confirm password,パスワードを確認
+Two-Factor Authentication,二要素認証
+Two-factor authentication,二要素認証
+2FA,二要素認証
+Enable 2FA,二要素認証を有効化
+Disable 2FA,二要素認証を無効化
+Security,セキュリティ
+Security Settings,セキュリティ設定
+Security settings,セキュリティ設定
+Sessions,セッション
+Active Sessions,アクティブなセッション
+Active sessions,アクティブなセッション
+Log Out,ログアウト
+Log out,ログアウト
+Sign Out,サインアウト
+Sign out,サインアウト
+Log In,ログイン
+Log in,ログイン
+Sign In,サインイン
+Sign in,サインイン
+Sign Up,サインアップ
+Sign up,サインアップ
+Create Account,アカウントを作成
+Create account,アカウントを作成
+Forgot Password,パスワードを忘れた
+Forgot password,パスワードを忘れた
+Reset Password,パスワードをリセット
+Reset password,パスワードをリセット
+Verify Email,メールを確認
+Verify email,メールを確認
+Resend Verification,確認メールを再送
+Resend verification,確認メールを再送
+Workspace,ワークスペース
+Workspaces,ワークスペース
+My Workspaces,マイワークスペース
+My workspaces,マイワークスペース
+Create Workspace,ワークスペースを作成
+Create workspace,ワークスペースを作成
+Delete Workspace,ワークスペースを削除
+Delete workspace,ワークスペースを削除
+Workspace Settings,ワークスペース設定
+Workspace settings,ワークスペース設定
+Team Members,チームメンバー
+Team members,チームメンバー
+Invite Team Member,チームメンバーを招待
+Invite team member,チームメンバーを招待
+Pending Invitations,保留中の招待
+Pending invitations,保留中の招待
+Leave Workspace,ワークスペースを離れる
+Leave workspace,ワークスペースを離れる
+Transfer Workspace,ワークスペースを移行
+Transfer workspace,ワークスペースを移行
+API,API
+API Access,APIアクセス
+API access,APIアクセス
+API Key,APIキー
+API key,APIキー
+API Keys,APIキー
+API keys,APIキー
+Generate API Key,APIキーを生成
+Generate API key,APIキーを生成
+Revoke API Key,APIキーを取り消す
+Revoke API key,APIキーを取り消す
+Webhook,Webhook
+Webhooks,Webhooks
+Add Webhook,Webhookを追加
+Add webhook,Webhookを追加
+Delete Webhook,Webhookを削除
+Delete webhook,Webhookを削除
+Endpoint URL,エンドポイントURL
+Endpoint url,エンドポイントURL
+Events,イベント
+Event,イベント
+Trigger Event,イベントをトリガー
+Trigger event,イベントをトリガー
+Integration,連携
+Integrations,連携
+Add Integration,連携を追加
+Add integration,連携を追加
+Remove Integration,連携を削除
+Remove integration,連携を削除
+Configure Integration,連携を設定
+Configure integration,連携を設定
+Connected,接続済み
+Disconnected,切断済み
+Connect,接続
+Disconnect,切断
+Reconnect,再接続
+Status,ステータス
+Active,アクティブ
+Inactive,非アクティブ
+Enabled,有効
+Disabled,無効
+Enable,有効化
+Disable,無効化
+On,オン
+Off,オフ
+Yes,はい
+No,いいえ
+OK,OK
+Cancel,キャンセル
+Confirm,確認
+Apply,適用
+Save,保存
+Save Changes,変更を保存
+Save changes,変更を保存
+Discard,破棄
+Discard Changes,変更を破棄
+Discard changes,変更を破棄
+Reset,リセット
+Reset to Default,デフォルトにリセット
+Reset to default,デフォルトにリセット
+Undo,元に戻す
+Redo,やり直す
+Copy,コピー
+Cut,切り取り
+Paste,貼り付け
+Duplicate,複製
+Delete,削除
+Remove,削除
+Add,追加
+Edit,編集
+Create,作成
+Update,更新
+Refresh,更新
+Retry,再試行
+Submit,送信
+Send,送信
+Upload,アップロード
+Export,エクスポート
+Import,インポート
+Share,共有
+Print,印刷
+More,その他
+Less,少なく
+Expand,展開
+Collapse,折りたたむ
+Show More,もっと表示
+Show more,もっと表示
+Show Less,少なく表示
+Show less,少なく表示
+View All,すべて表示
+View all,すべて表示
+See All,すべて見る
+See all,すべて見る
+Load More,さらに読み込む
+Load more,さらに読み込む
+Loading,読み込み中
+Saving,保存中
+Processing,処理中
+Please Wait,お待ちください
+Please wait,お待ちください
+Try Again,再試行
+Try again,再試行
+Learn More,詳細を見る
+Learn more,詳細を見る
+Get Started,始める
+Get started,始める
+Next,次へ
+Previous,前へ
+Back,戻る
+Continue,続ける
+Skip,スキップ
+Finish,完了
+Done,完了
+Close,閉じる
+Exit,終了
+Quit,終了
+today,今日
+yesterday,昨日
+Tomorrow,明日
+tomorrow,明日
+Last week,先週
+last week,先週
+This week,今週
+this week,今週
+Last month,先月
+last month,先月
+This month,今月
+this month,今月
+ago,前
+days ago,日前
+hours ago,時間前
+minutes ago,分前
+just now,たった今
+seconds ago,秒前
+a day ago,1日前
+a week ago,1週間前
+a month ago,1ヶ月前
+a year ago,1年前
+Copy link,リンクをコピー
+Open link,リンクを開く
+Flex Child,フレックス子要素
+Style Guide,スタイルガイド
+Style guide,スタイルガイド
+Download asset,アセットをダウンロード
+Enable custom code,カスタムコードを有効化
+Enable custom code?,カスタムコードを有効化しますか？
+Alphabetical,アルファベット順
+Type,タイプ
+Order,順序
+Newest to oldest,新しい順
+Oldest to newest,古い順
+Access Control,アクセス制御
+Restrict Access,アクセス制限
+Public,公開
+Anyone with the password,パスワードを知っている人
+Anyone on the internet can access this page.,インターネット上の誰でもこのページにアクセスできます。
+Search Result Preview,検索結果プレビュー
+Result,結果
+Create new page,新しいページを作成
+Search pages and folders,ページとフォルダを検索
+Compress,圧縮
+Unordered Lists,番号なしリスト
+Ordered Lists,番号付きリスト
+List Items,リストアイテム
+New & Noteworthy,新着＆注目
+Blog,ブログ
+Team,チーム
+Domain Updates,ドメイン更新
+Review all domains,すべてのドメインを確認
+hours left,時間残り
+Starter site,スターターサイト

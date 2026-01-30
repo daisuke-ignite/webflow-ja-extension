@@ -88,11 +88,136 @@ async function loadTranslationDict() {
   }
 }
 
+// フレーズコンテナのタグ一覧（分割テキストノード対応用）
+const PHRASE_CONTAINER_TAGS = new Set([
+  'BUTTON', 'A', 'SPAN', 'LABEL', 'LI', 'P',
+  'H1', 'H2', 'H3', 'H4', 'H5', 'H6',
+  'OPTION', 'TH', 'TD', 'LEGEND', 'FIGCAPTION'
+]);
+
+// 翻訳対象から除外するセレクタ（クラス名、サイト名、ページ名、コンポーネント名など）
+const SKIP_SELECTORS = [
+  // クラス名・セレクタ表示エリア
+  '[class*="selector"]',
+  '[class*="Selector"]',
+  '[class*="class-name"]',
+  '[class*="ClassName"]',
+  '[class*="className"]',
+  '[class*="style-manager"]',
+  '[class*="StyleManager"]',
+  '[class*="style-selector"]',
+  '[class*="StyleSelector"]',
+  '.style-selector',
+  '.combo-class',
+  '[class*="combo-class"]',
+  '[class*="ComboClass"]',
+
+  // サイト名・プロジェクト名表示
+  '[class*="site-name"]',
+  '[class*="siteName"]',
+  '[class*="SiteName"]',
+  '[class*="project-name"]',
+  '[class*="projectName"]',
+  '[class*="ProjectName"]',
+  '[class*="site-title"]',
+  '[class*="siteTitle"]',
+  '[class*="SiteTitle"]',
+
+  // ページ名・テンプレート名表示
+  '[class*="page-name"]',
+  '[class*="pageName"]',
+  '[class*="PageName"]',
+  '[class*="template-name"]',
+  '[class*="templateName"]',
+  '[class*="TemplateName"]',
+  '[class*="page-title"]',
+  '[class*="pageTitle"]',
+
+  // コンポーネント名・シンボル名
+  '[class*="component-name"]',
+  '[class*="componentName"]',
+  '[class*="ComponentName"]',
+  '[class*="symbol-name"]',
+  '[class*="symbolName"]',
+  '[class*="SymbolName"]',
+
+  // ナビゲーター内の要素名表示
+  '[class*="navigator"] [class*="name"]',
+  '[class*="Navigator"] [class*="Name"]',
+  '[class*="navigator-item"]',
+  '[class*="NavigatorItem"]',
+  '[class*="element-label"]',
+  '[class*="elementLabel"]',
+  '[class*="ElementLabel"]',
+  '[class*="element-name"]',
+  '[class*="elementName"]',
+  '[class*="ElementName"]',
+
+  // 入力フィールド・編集可能領域
+  'input',
+  'textarea',
+  '[contenteditable="true"]',
+  '[contenteditable="plaintext-only"]',
+
+  // コードエディタ・コード表示領域
+  '[class*="code-editor"]',
+  '[class*="CodeEditor"]',
+  '[class*="code-block"]',
+  '[class*="CodeBlock"]',
+  '[class*="codeBlock"]',
+  'code',
+  'pre',
+
+  // Webflow特有のUI要素名表示
+  '[data-automation-id*="name"]',
+  '[data-automation-id*="label"]',
+  '[class*="asset-name"]',
+  '[class*="assetName"]',
+  '[class*="AssetName"]',
+  '[class*="file-name"]',
+  '[class*="fileName"]',
+  '[class*="FileName"]',
+
+  // スタイルパネル内のクラス表示
+  '[class*="style-name"]',
+  '[class*="styleName"]',
+  '[class*="StyleName"]',
+  '[class*="class-label"]',
+  '[class*="classLabel"]',
+  '[class*="ClassLabel"]',
+
+  // ダッシュボード内のサイト名・フォルダ名
+  '[class*="site-card"] [class*="name"]',
+  '[class*="SiteCard"] [class*="Name"]',
+  '[class*="folder-name"]',
+  '[class*="folderName"]',
+  '[class*="FolderName"]',
+
+  // ユーザーが入力したコンテンツの表示領域
+  '[class*="user-content"]',
+  '[class*="userContent"]',
+  '[class*="custom-text"]',
+  '[class*="customText"]',
+];
+
+// セレクタを結合して一度にマッチできるようにする
+const SKIP_SELECTOR_COMBINED = SKIP_SELECTORS.join(',');
+
 function shouldSkipTextNode(node) {
   const parent = node.parentElement;
   if (!parent) return false;
+
   const tag = parent.tagName;
-  return tag === "SCRIPT" || tag === "STYLE" || tag === "NOSCRIPT";
+  if (tag === "SCRIPT" || tag === "STYLE" || tag === "NOSCRIPT") return true;
+
+  // 親要素または祖先要素が除外セレクタにマッチするかチェック
+  try {
+    if (parent.closest(SKIP_SELECTOR_COMBINED)) return true;
+  } catch {
+    // セレクタが無効な場合は無視
+  }
+
+  return false;
 }
 
 function scheduleStatsFlush() {
@@ -122,6 +247,52 @@ function recordTermStats(termCounts) {
   scheduleStatsFlush();
 }
 
+// 親要素のtextContent全体で翻訳を試行（分割テキストノード対応）
+function tryTranslateAsParentPhrase(textNode) {
+  const parent = textNode.parentElement;
+  if (!parent) return false;
+
+  // UIコンテナタグのみ対象
+  if (!PHRASE_CONTAINER_TAGS.has(parent.tagName)) return false;
+
+  // テキストのみのコンテナ（ネストした要素なし）
+  if (parent.childElementCount > 0) return false;
+
+  // 処理済みならスキップ
+  if (processedNodes.has(parent)) return false;
+
+  const fullText = parent.textContent;
+  if (!fullText) return false;
+
+  const trimmed = fullText.trim();
+  if (!trimmed || trimmed.length > 150) return false;
+
+  // 翻訳済みならスキップ
+  if (isAlreadyTranslated(trimmed)) {
+    processedNodes.add(parent);
+    return false;
+  }
+
+  // 翻訳を試行
+  const translated = translateTextWithStats(trimmed, translationPairs, {
+    skipIfJapanese: true,
+    caseInsensitive: false,
+  });
+
+  if (translated) {
+    // 元のホワイトスペースを保持
+    const leadingSpace = fullText.match(/^\s*/)[0];
+    const trailingSpace = fullText.match(/\s*$/)[0];
+    parent.textContent = leadingSpace + translated.text.trim() + trailingSpace;
+
+    recordTermStats(translated.termCounts);
+    processedNodes.add(parent);
+    return true;
+  }
+
+  return false;
+}
+
 // 2. テキストノードの部分置換（最適化版 + マッピング統計）
 function replaceTextNode(node) {
   if (!node || node.nodeType !== Node.TEXT_NODE) return;
@@ -132,6 +303,11 @@ function replaceTextNode(node) {
   }
 
   if (shouldSkipTextNode(node)) return;
+
+  // 親要素フレーズ翻訳を先に試行（分割テキストノード対応）
+  if (tryTranslateAsParentPhrase(node)) {
+    return;
+  }
 
   const originalText = node.nodeValue;
   if (!originalText || originalText.trim().length === 0) return;
